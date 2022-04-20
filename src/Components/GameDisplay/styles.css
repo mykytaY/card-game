@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=ZCOOL+QingKe+HuangYou&display=swap');
+
+.display-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.game-table {
+  margin: 50px 30px;
+  min-height: 475px;
+  height: 80vh;
+  min-width: 850px;
+  width: 90vw;
+  border: 40px solid rgb(90, 54, 20);
+  border-radius: 42%;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.8),
+    inset 0 0 50px 20px rgba(0, 0, 0, 0.8);
+}
+
+#game-table1 {
+  background: radial-gradient(
+    circle,
+    rgba(23, 184, 8, 1) 0%,
+    rgba(11, 89, 6, 1) 100%
+  );
+}
+
+#game-table2 {
+  background: radial-gradient(
+    circle,
+    rgb(184, 8, 8) 0%,
+    rgb(63, 4, 4) 100%
+  );
+}
+
+#game-table3 {
+  background: radial-gradient(
+    circle,
+    rgb(0, 217, 255) 0%,
+    rgb(3, 50, 68) 100%
+  );
+}
+
+#game-table4 {
+  background: radial-gradient(
+    circle,
+    rgb(122, 60, 209) 0%,
+    rgb(62, 9, 96) 100%
+  );
+}
+
+.player-cards,
+.bot-cards {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 15px;
+}
+
+.player-draw,
+.bot-draw,
+.deck1,
+.deck2 {
+  width: 150px;
+  min-width: 150px;
+  border: 1px solid white;
+  height: 200px;
+  border-radius: 4%;
+}
+
+.player-draw { float: left }
+
+.bot-draw { float: right }
+
+.center-emoji {
+  height: 200px;
+  min-width: 130px;
+  line-height: 200px;
+  font-size: 90px;
+}
+
+#animation-container {
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font: 36px 'Press Start 2P', sans-serif;
+}
+
+.card-container {
+  flex: 1 1 0;
+  margin: 0 40px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#bottom-container {
+  min-height: 110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.animate-message {
+  color: fuchsia;
+  animation: 
+    fade 1300ms ease-in 200ms 1 backwards,
+    blinky 400ms step-start 1800ms 3 none;
+}
+
+.animate-player {
+  color: yellow; 
+  animation: blinky 400ms step-start 0ms 3 forwards;
+}
+
+.animate-bot { 
+  color: red;
+  animation: fade 400ms linear forwards;
+}
+
+.animate-draw { 
+  color: lightgrey;
+  animation: fade 400ms linear forwards;
+}
+
+@keyframes fade {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+@keyframes blinky {
+  0% { opacity: 1 }
+  50% { opacity: 0 } 
+  100% { opacity: 1 }
+}
+
+#buttons-panel {
+  height: 72px;
+  width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 10px;
+  background-color: rgb(90, 54, 20);
+  border-radius: 140px 140px 0 0;
+  box-shadow: 0 -6px 6px rgba(0, 0, 0, 0.6);
+}
+
+.btn {
+  width: 60px;
+  height: 60px;
+  padding: 0px;
+  border: 2px outset rgb(100, 100, 100);
+  border-radius: 30px;
+  cursor: pointer;
+  font: 16px 'ZCOOL QingKe HuangYou', sans-serif;
+  padding: 3px 0px;
+}
+.btn:active { 
+  border: 2px inset rgb(100, 100, 100);
+  color: rgb(220, 220, 220);
+}
+
+#table-color {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 30px;
+  background-color: rgb(50, 50, 255);
+  border-radius: 30px 30px 0 0;
+  border-bottom: none;
+}
+
+#card-color {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 30px;
+  background-color: rgb(255, 255, 0);
+  border-radius: 0 0 30px 30px;
+  border-top: none;
+}
+
+#draw-card { background-color: rgb(0, 255, 0) }
+
+#new-game { background-color: rgb(255, 0, 0) }
+
+.badge {
+  height: 110px;
+  width: 240px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: tomato;
+  border-radius: 25px;
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  align-items: space-between;
+  gap: 6px;
+}
+
+.score-container {
+  display: flex;
+  gap: 2px;
+  border-radius: 10px;
+  border: 4px silver solid;
+  background-color: silver;
+}
+
+.score-digit {
+  width: 24px;
+  padding: 2px;
+  background-color: black;
+  border-radius: 8px;
+  font: 38px 'ZCOOL QingKe HuangYou', sans-serif;
+  color: white;
+}
+
+.star-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.star {
+  height: 34px;
+  width: 34px;
+  font-size: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle {
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: silver;
+}
+
+.emoji-fill {
+  height: 86px;
+  width: 86px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 43px;
+  font-size: 50px;
+}
+
+#bot-emoji { background-color: plum }
+#player-emoji { background-color: cyan }
+
+.loginWarning {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.loginMsg{
+  font-size: 50px;
+  font-family: 'Press Start 2P', sans-serif;
+}
+
+.loginButton {
+  font-family: 'Comfortaa', cursive;
+  text-transform: uppercase;
+  outline: 0;
+  background: rgba(45, 59, 161, 1);
+  width: 30%;
+  border: 0;
+  border-radius: 5px;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  font-family: 'Press Start 2P', sans-serif;
+}
+
+.loginButton:hover {
+  font-weight: bold;
+  background: tomato;
+}
+
+.loginButton:active {
+  background: rgba(45, 59, 161, 0.8);
+}

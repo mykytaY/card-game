@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.gamePage { background: rgb(19, 25, 70) }
+
+#monitor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    height: 500px;    
+    background: black;
+    border: 12px #5A5A5A solid;
+    border-radius: 50% / 10%; 
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 10px;
+    text-align: center;
+    color: lime;
+    animation-name: flicker;
+    animation-duration: 0.4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes flicker {
+    0% { box-shadow: 0 0 100px 0 rgba(200,235,255,0.4) }
+    100% { box-shadow: 0 0 90px 0 rgba(200,235,255,0.4) }
+}
+
+#monitor-screen { height: 350px }
+
+#text-wrapper { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 35%;
+}
+
+#table-wrapper { 
+    display: flex;
+    flex-direction: column;
+    height: 65%;
+}
+
+#search-form { background-color: black }
+#search-form:hover { cursor: text }
+
+#search-input {
+    background-color: black;
+    border: none;
+    font: 10px 'Press Start 2P';
+    text-align: center;
+    padding: 4px;
+    color: hotpink;
+}
+
+#search-button {
+    background-color: black;
+    border: none;
+    color: white;
+}
+
+#search-button:hover{ 
+    color: hotpink;
+    cursor: pointer;
+}
+
+#msg { 
+    padding: 6px;
+    color: orange;
+}
+
+#title { color: red }
+
+#search-score-table {
+    margin: 0;
+    border-collapse: collapse;
+    color: yellow;
+}
+
+/* matt */
+.invasion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+}
+
+.backButton{
+    font-family: 'Comfortaa', cursive;
+    text-transform: uppercase;
+    outline: 0;
+    background: #4b6cb7;
+    width: 100%;
+    border: 0;
+    border-radius: 5px;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    width: 200px;
+    margin-bottom: 1rem;
+}
+.backButton:active {
+    background: #395591;
+  }

@@ -1,0 +1,22 @@
+.App {
+  text-align: center;
+  min-width: 1000px;
+}
+
+.App-header {
+  background-color: #282c34;
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.gamePage {
+  background: rgba(31, 41, 112, 1);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
